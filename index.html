@@ -23,7 +23,25 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <header>
+          <h1 class="my-5 text-center">Todolist</h1>
+        </header>
+        <main>
+          <div class="col col-md-7 mx-auto">
+            <ul class="list-group">
+              <ul class="list-group">
+                <li v-for="(task, index) in tasks" class="list-group-item">
+                  {{task.nome}}
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+
     <!-- vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- My js -->

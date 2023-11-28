@@ -4,7 +4,20 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: 'Hello Vue!',
+      tasks: [
+        {
+          nome: 'Andare a calcio',
+          done: true,
+        },
+        {
+          nome: 'Studiare Vue.js',
+          done: true,
+        },
+        {
+          nome: 'Seguire le lezioni',
+          done: true,
+        },
+      ],
     };
   },
 }).mount('#app');
