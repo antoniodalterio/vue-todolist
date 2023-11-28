@@ -36,6 +36,7 @@
                 class="form-control"
                 placeholder="Aggiungi Task"
                 v-model="newTask"
+                @keyup.enter="addTask"
               />
               <button
                 class="btn btn-success"
