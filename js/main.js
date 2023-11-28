@@ -15,7 +15,7 @@ createApp({
         },
         {
           nome: 'Seguire le lezioni',
-          done: true,
+          done: false,
         },
       ],
     };

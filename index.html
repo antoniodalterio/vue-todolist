@@ -36,7 +36,11 @@
                   v-for="(task, index) in tasks"
                   class="list-group-item d-flex justify-content-between align-items-center"
                 >
-                  <div>{{task.nome}}</div>
+                  <div
+                    :class="task.done === true ? 'text-decoration-line-through' : '' "
+                  >
+                    {{task.nome}}
+                  </div>
                   <i class="fa-solid fa-circle-xmark" role="button"></i>
                 </li>
               </ul>
