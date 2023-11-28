@@ -23,13 +23,20 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- controllo vue -->
     <div id="app">
+      <!-- container -->
       <div class="container">
+        <!-- parte Header -->
         <header>
           <h1 class="my-5 text-center">Todolist</h1>
         </header>
+        <!-- parte Header -->
+        <!-- parte Main -->
         <main>
+          <!-- contenuto main -->
           <div class="col col-md-7 mx-auto">
+            <!-- aggiunta tag input -->
             <div class="input-group mb-3">
               <input
                 type="text"
@@ -47,6 +54,9 @@
                 Button
               </button>
             </div>
+            <!-- aggiunta tag input -->
+
+            <!-- lista task -->
             <ul class="list-group" v-if="tasks.length > 0">
               <ul class="list-group">
                 <li
@@ -68,12 +78,19 @@
                 </li>
               </ul>
             </ul>
-            <div class="alert alert-warning text-center" role="alert" v-else>
+            <!-- lista task -->
+
+            <!-- alert -->
+            <div class="alert alert-primary text-center" role="alert" v-else>
               Non ci sono Task!
             </div>
+            <!-- alert -->
           </div>
+          <!-- contenuto main -->
         </main>
+        <!-- parte Main -->
       </div>
+      <!-- container -->
     </div>
 
     <!-- vue js -->
