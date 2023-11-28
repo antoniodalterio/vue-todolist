@@ -30,6 +30,22 @@
         </header>
         <main>
           <div class="col col-md-7 mx-auto">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Aggiungi Task"
+                v-model="newTask"
+              />
+              <button
+                class="btn btn-success"
+                type="button"
+                id="add-task"
+                @click="addTask"
+              >
+                Button
+              </button>
+            </div>
             <ul class="list-group" v-if="tasks.length > 0">
               <ul class="list-group">
                 <li
