@@ -30,7 +30,7 @@
         </header>
         <main>
           <div class="col col-md-7 mx-auto">
-            <ul class="list-group">
+            <ul class="list-group" v-if="tasks.length > 0">
               <ul class="list-group">
                 <li
                   v-for="(task, index) in tasks"
@@ -41,10 +41,17 @@
                   >
                     {{task.nome}}
                   </div>
-                  <i class="fa-solid fa-circle-xmark" role="button"></i>
+                  <i
+                    class="fa-solid fa-circle-xmark"
+                    role="button"
+                    @click="removeTask(index)"
+                  ></i>
                 </li>
               </ul>
             </ul>
+            <div class="alert alert-warning text-center" role="alert" v-else>
+              Non ci sono Task!
+            </div>
           </div>
         </main>
       </div>
