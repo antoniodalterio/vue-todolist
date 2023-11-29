@@ -32,12 +32,7 @@ createApp({
       }
     },
     checkTask(check) {
-      console.log(this.tasks[check]['done']);
-      if (!this.tasks[check]['done']) {
-        this.tasks[check]['done'] = true;
-      } else if (this.tasks[check]['done']) {
-        this.tasks[check]['done'] = false;
-      }
+      this.tasks[check].done = !this.tasks[check].done;
     },
   },
 }).mount('#app');

@@ -51,7 +51,7 @@
                 id="add-task"
                 @click="addTask"
               >
-                Button
+                Aggiungi
               </button>
             </div>
             <!-- aggiunta tag input -->
@@ -62,13 +62,14 @@
                 <li
                   v-for="(task, index) in tasks"
                   class="list-group-item d-flex justify-content-between align-items-center"
-                  @click="checkTask(index)"
                   role="button"
                 >
                   <div
+                    class="w-100"
                     :class="task.done === true ? 'text-decoration-line-through' : '' "
+                    @click="checkTask(index)"
                   >
-                    {{task.nome}}
+                    {{index + 1}} - {{task.nome}}
                   </div>
                   <i
                     class="fa-solid fa-circle-xmark"
